@@ -51,11 +51,16 @@ a:hover{ opacity:.85; }
 }
 
 .hero {
+  min-height: 80vh;
   background-image: url("hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
 }
+
 
 
 h1{
