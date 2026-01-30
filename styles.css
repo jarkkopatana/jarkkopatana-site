@@ -152,3 +152,6 @@ footer{
   .nav{ border-radius:18px; flex-direction:column; align-items:flex-start; }
   .work{ grid-column: span 12; }
 }
+.hero-buttons {
+  display: none;
+}
