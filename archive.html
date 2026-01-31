@@ -1,76 +1,73 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="styles.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Archive — Jarkko Patana</title>
-  <meta name="description" content="Archive of works by Jarkko Patana." />
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <meta name="description" content="Archive selection by Jarkko Patana." />
 </head>
+
 <body>
   <div class="container">
+
     <nav class="nav">
       <div class="brand">Jarkko Patana</div>
       <div class="menu">
         <a href="/index.html">Home</a>
         <a href="/archive.html">Archive</a>
+        <a href="/news.html">News</a>
         <a href="/contact.html">Contact</a>
       </div>
     </nav>
 
     <section class="section">
-      <h2>Archive</h2>
-      <p>A quiet record of previous selections. You can keep "Buy print" buttons here too (optional).</p>
-      <hr class="sep" />
+      <h1>Archive</h1>
+      <p>A quieter selection from my archive.</p>
 
       <div class="grid">
-        <!-- Duplicate / add cards as needed -->
-        <article class="card">
-          <img src="/assets/images/archive-01.jpg" alt="Archive 01" />
-          <div class="card-body">
-            <p class="card-title">Archive Title 01</p>
-            <p class="card-desc">Year / location / medium (optional).</p>
-            <div class="card-actions">
-              <a class="link" href="https://example.com" target="_blank" rel="noreferrer">Buy print</a>
-              <a class="link" href="https://example.com" target="_blank" rel="noreferrer">View NFT</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/images/archive-02.jpg" alt="Archive 02" />
-          <div class="card-body">
-            <p class="card-title">Archive Title 02</p>
-            <p class="card-desc">Year / location / medium (optional).</p>
-            <div class="card-actions">
-              <a class="link" href="https://example.com" target="_blank" rel="noreferrer">Buy print</a>
-              <a class="link" href="https://example.com" target="_blank" rel="noreferrer">View NFT</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/images/archive-03.jpg" alt="Archive 03" />
-          <div class="card-body">
-            <p class="card-title">Archive Title 03</p>
-            <p class="card-desc">Year / location / medium (optional).</p>
-            <div class="card-actions">
-              <a class="link" href="https://example.com" target="_blank" rel="noreferrer">Buy print</a>
-              <a class="link" href="https://example.com" target="_blank" rel="noreferrer">View NFT</a>
+        <article class="work">
+          <a href="/assets/work-archive.jpg" class="lightbox">
+            <img src="/assets/work-archive.jpg" alt="Archive work">
+          </a>
+          <div class="workmeta">
+            <p class="worktitle">Archive print</p>
+            <p class="workdesc">Fine art print.</p>
+            <div class="actions">
+              <a class="btn" href="#">Buy print</a>
             </div>
           </div>
         </article>
       </div>
-
-      <p class="note">You can keep the archive bigger, but keep the Home page minimal.</p>
     </section>
 
     <div class="footer">
-      <div>Contact: <a href="mailto:j.patana@hotmail.fi">j.patana@hotmail.fi</a></div>
-      <div class="small"><a href="/index.html">Back to Home</a></div>
+      <div class="small">© Jarkko Patana</div>
     </div>
+
   </div>
 
-  <script src="/assets/app.js"></script>
+  <!-- lightbox toimii jo indexistä, sama script käy täällä -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); align-items:center; justify-content:center; z-index:999;">
+    <img id="lightbox-img" style="max-width:90%; max-height:90%;" />
+  </div>
+
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('a.lightbox').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = link.href;
+        lb.style.display = 'flex';
+      });
+    });
+
+    lb.addEventListener('click', () => {
+      lb.style.display = 'none';
+      lbImg.src = '';
+    });
+  </script>
 </body>
 </html>
