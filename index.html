@@ -48,9 +48,10 @@
   <p>Three works available as fine art prints.</p>
 
   <div class="grid">
-
     <article class="work">
-      <img src="/assets/work-01.jpg" alt="Work 01" />
+      <a href="/assets/work-01.jpg" class="lightbox">
+  <img src="/assets/work-01.jpg" alt="Work 01" />
+</a>
       <div class="workmeta">
         <p class="worktitle">Pieni Mykeröiseni</p>
         <p class="workdesc">Fine art print.</p>
@@ -94,5 +95,9 @@
   </div>
 
   <script src="/assets/app.js"></script>
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); align-items:center; justify-content:center; z-index:999;">
+  <img id="lightbox-img" style="max-width:90%; max-height:90%;" />
+</div>
+
 </body>
 </html>
