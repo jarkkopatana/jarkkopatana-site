@@ -98,6 +98,23 @@
   <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); align-items:center; justify-content:center; z-index:999;">
   <img id="lightbox-img" style="max-width:90%; max-height:90%;" />
 </div>
+<script>
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('a.lightbox').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      lbImg.src = link.href;
+      lb.style.display = 'flex';
+    });
+  });
+
+  lb.addEventListener('click', () => {
+    lb.style.display = 'none';
+    lbImg.src = '';
+  });
+</script>
 
 </body>
 </html>
