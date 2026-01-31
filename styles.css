@@ -143,6 +143,17 @@ footer{
   margin-top:42px;
   color:var(--muted);
   font-size:13px;
+  .footer {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.footer-note {
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 }
 
 @media (max-width: 900px){
