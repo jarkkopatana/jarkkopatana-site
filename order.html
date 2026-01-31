@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order a print — Jarkko Patana</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">Jarkko Patana</div>
+      <div class="menu">
+        <a href="/index.html">Home</a>
+        <a href="/archive.html">Archive</a>
+        <a href="/news.html">News</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="section">
+      <h2>Order a print</h2>
+
+      <p class="lead">
+        <span class="muted">Selected artwork:</span>
+        <strong id="selectedPrint">—</strong>
+      </p>
+
+      <p class="muted">
+        Size: 25 × 30 cm • Premium matte • Unframed • Shipped directly to you
+      </p>
+
+      <form class="order-form" action="mailto:j.patana@hotmail.fi" method="post" enctype="text/plain">
+        <!-- hidden field so customer doesn't need to type anything -->
+        <input type="hidden" id="printField" name="print" value="">
+
+        <label>
+          Your name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </label>
+
+        <label>
+          Shipping address
+          <textarea name="address" rows="3" placeholder="Street, postal code, city, country" required></textarea>
+        </label>
+
+        <label>
+          Notes (optional)
+          <textarea name="message" rows="3" placeholder="Anything I should know?"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send order request</button>
+      </form>
+
+      <p class="small muted" style="margin-top:16px;">
+        I will confirm availability and payment details by email before printing.
+      </p>
+    </section>
+
+    <div class="footer">
+      <div class="small">© <span id="y"></span> Jarkko Patana</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const params = new URLSearchParams(window.location.search);
+    const printName = params.get('print') || '';
+
+    document.getElementById('selectedPrint').textContent = printName || '—';
+    document.getElementById('printField').value = printName;
+  </script>
+</body>
+</html>
