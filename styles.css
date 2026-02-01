@@ -166,3 +166,72 @@ h1{
 .hero .hero-buttons{
   display:none !important;
 }
+/* --- Order form --- */
+.order-form { margin-top: 18px; }
+
+.form-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 880px;
+}
+
+.field { display:flex; flex-direction:column; gap: 8px; }
+
+.field label{
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+.field input,
+.field textarea,
+.field select{
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.35);
+  color: rgba(255,255,255,0.92);
+  outline: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.field textarea{
+  min-height: 92px;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder{
+  color: rgba(255,255,255,0.35);
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color: rgba(255,255,255,0.28);
+  background: rgba(0,0,0,0.45);
+}
+
+.span-2 { grid-column: span 2; }
+
+.form-actions{
+  margin-top: 16px;
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.form-hint{
+  margin: 0;
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+}
+
+/* Mobile: stack */
+@media (max-width: 740px){
+  .form-grid{ grid-template-columns: 1fr; }
+  .span-2{ grid-column: auto; }
+}
