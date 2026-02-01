@@ -255,4 +255,20 @@ h1{
   pointer-events: auto;
   cursor: pointer;
   text-decoration: underline;
+  @media (max-width: 560px){
+  .hero{
+    min-height: auto;
+    padding: 36px 18px;
+    background-position: center;
+  }
+
+  .hero-content{
+    width: 100%;
+  }
+
+  .hero-content h1{
+    font-size: 28px;
+  }
+}
+
 }
