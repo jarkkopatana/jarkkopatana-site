@@ -30,32 +30,34 @@
         Size: 25 × 30 cm • Premium matte • Unframed • Shipped directly to you
       </p>
 
-      <form class="order-form" action="mailto:j.patana@hotmail.fi" method="post" enctype="text/plain">
-        <!-- hidden field so customer doesn't need to type anything -->
-        <input type="hidden" id="printField" name="print" value="">
+      <form class="order-form" action="YOUR_FORM_ENDPOINT" method="post">
+  <div class="form-grid">
+    <div class="field">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" required>
+    </div>
 
-        <label>
-          Your name
-          <input type="text" name="name" placeholder="Your name" required>
-        </label>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@email.com" required>
+    </div>
 
-        <label>
-          Email
-          <input type="email" name="email" placeholder="your@email.com" required>
-        </label>
+    <div class="field span-2">
+      <label for="address">Shipping address</label>
+      <textarea id="address" name="address" rows="3" placeholder="Street, postal code, city, country" required></textarea>
+    </div>
 
-        <label>
-          Shipping address
-          <textarea name="address" rows="3" placeholder="Street, postal code, city, country" required></textarea>
-        </label>
+    <div class="field span-2">
+      <label for="notes">Notes (optional)</label>
+      <textarea id="notes" name="notes" rows="3" placeholder="Anything I should know?"></textarea>
+    </div>
+  </div>
 
-        <label>
-          Notes (optional)
-          <textarea name="message" rows="3" placeholder="Anything I should know?"></textarea>
-        </label>
-
-        <button class="btn" type="submit">Send order request</button>
-      </form>
+  <div class="form-actions">
+    <button class="btn" type="submit">Send order request</button>
+    <p class="form-hint">I will confirm availability and payment details by email before printing.</p>
+  </div>
+</form>
 
       <p class="small muted" style="margin-top:16px;">
         I will confirm availability and payment details by email before printing.
