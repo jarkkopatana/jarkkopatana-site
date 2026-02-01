@@ -235,3 +235,8 @@ h1{
   .form-grid{ grid-template-columns: 1fr; }
   .span-2{ grid-column: auto; }
 }
+.order-note a {
+  pointer-events: auto;
+  cursor: pointer;
+  text-decoration: underline;
+}
