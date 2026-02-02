@@ -329,7 +329,6 @@ h1{
   display: block;
 }
 
-/* piilota "How ordering works" kunnes nappia painetaan */
 .order-info { display: none; }
 .order-info:target { display: block; }
 }
