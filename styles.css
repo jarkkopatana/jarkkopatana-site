@@ -321,3 +321,10 @@ h1{
 }
 
 .order-close { margin: 14px 0 0; text-align: center; }
+.order-info {
+  display: none;
+}
+
+.order-info:target {
+  display: block;
+}
