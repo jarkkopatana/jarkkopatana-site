@@ -73,11 +73,12 @@ a:hover{ opacity:.85; }
 }
 
 .hero-content p{
-  margin-top: 0;
+  margin-top: 6px;
   text-align: center;
-  max-width: none;   /* tärkein */
-  white-space: nowrap;
+  max-width: 52ch;     /* pakottaa 1–2 riviä desktopissa */
+  white-space: normal; /* sallii rivittymisen */
 }
+
 .hero-buttons{ display:flex; gap:12px; flex-wrap:wrap; }
 
 h1{
@@ -331,4 +332,9 @@ h1{
 
 .order-info { display: none; }
 .order-info:target { display: block; }
+}
+@media (max-width: 600px){
+  .hero-content p{
+    max-width: 90%;
+  }
 }
