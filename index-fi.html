@@ -1,0 +1,168 @@
+<body id="top">
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarkko Patana — Photography</title>
+  <meta name="description" content="Photography by Jarkko Patana. Current selection, archive, and prints." />
+  <style>
+  .order-info { display: none !important; }
+  .order-info:target { display: block !important; }
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Suomalaista valoa ja hiljaisia hetkiä</h1>
+    <p>Hei! Olen Jarkko, valokuvaaja Suomesta. Pyrin tuomaan kuviini oman näkökulmani.</p>
+  </div>
+</section>
+
+
+<section class="container intro">
+  <p class="intro-text">
+    I photograph Finnish light and moments of quiet attention.<br>
+    My work is about slowing down — staying with an image long enough
+    for it to begin speaking back.
+  </p>
+
+  <p class="intro-text muted">
+    Sometimes the subjects are landscapes, sometimes small details,
+    sometimes abstractions formed by light itself.
+    I’m interested in stillness, presence,
+    and the space between seeing and feeling.
+  </p>
+</section>
+
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">Jarkko Patana</div>
+<div class="menu">
+  <a href="/index-fi.html">Etusivu</a>
+  <a href="/news-fi.html">Uutiset</a> <!-- jos teet -->
+  <a href="/archive-fi.html">Arkisto</a>
+  <a href="/contact-fi.html">Yhteys</a>
+  <a href="/index.html">EN</a>
+</div>
+
+    </nav>
+
+
+   <section class="section">
+  <h2>Current selection</h2>
+  <p>Three works available as fine art prints.</p>
+
+  <div class="grid">
+    <article class="work">
+      <a href="/assets/work-01.jpg" class="lightbox">
+  <img src="/assets/work-01.jpg" alt="Work 01" />
+</a>
+      <div class="workmeta">
+        <p class="worktitle">Pieni Mykeröiseni</p>
+        <p class="workdesc">Fine art print.</p>
+<div class="actions">
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd09pu7Rnf6HMRbGOFdTY4WrW2PJhZanMvkG24HxP0ZBtT8BA/viewform?usp=dialog" target="_blank" rel="noreferrer">
+  Buy print
+</a>
+
+
+  <a class="btn btn-ghost" href="#how-ordering-works">How it works</a>
+</div>
+
+
+      </div>
+    </article>
+
+    <article class="work">
+     <a href="/assets/work-02.jpg" class="lightbox">
+  <img src="/assets/work-02.jpg" alt="Work 02">
+</a>
+      <div class="workmeta">
+        <p class="worktitle">Why We Are - Silent Moment</p>
+        <p class="workdesc">Fine art print.</p>
+<div class="actions">
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdX6dZznIq0G-nupWBqT1zDnlABEu54Bo5fDSYLbkDBqgyd1w/viewform?usp=dialog" target="_blank" rel="noreferrer">
+  Buy print
+</a>
+  <a class="btn btn-ghost" href="#how-ordering-works">How it works</a>
+</div>
+      </div>
+    </article>
+
+    <article class="work">
+    <a href="/assets/work-03.jpg" class="lightbox">
+  <img src="/assets/work-03.jpg" alt="Work 03">
+</a>
+      <div class="workmeta">
+        <p class="worktitle">Still</p>
+        <p class="workdesc">Fine art print.</p>
+<div class="actions">
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScgW1QdceHXrngAXIhgbU53W-mmBx-OKzMFiy26clqtqcXnLw/viewform?usp=dialog" target="_blank" rel="noreferrer">
+  Buy print
+</a>
+  <a class="btn btn-ghost" href="#how-ordering-works">How it works</a>
+</div>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+    <div id="close"></div>
+<section id="how-ordering-works" class="container order-info">
+  <h3>How ordering works</h3>
+  <p class="order-close">
+ <a class="btn btn-ghost" href="#close">Close</a>
+</p>
+  <ol class="steps">
+    <li><strong>Open the order form.</strong> Clicking “Buy print” takes you to a Google Form where the artwork is pre-selected.</li>
+    <li><strong>Fill in your details.</strong> Add your name, email, and shipping address (and any notes).</li>
+    <li><strong>Payment link by email.</strong> After you submit the form, I’ll email you a payment link and confirm the order. You’ll get another confirmation once the print has been shipped.</li>
+  </ol>
+
+  <div class="specs">
+    <div><span>Size</span><strong>25 × 30 cm</strong></div>
+    <div><span>Paper</span><strong>Premium matte</strong></div>
+    <div><span>Frame</span><strong>Unframed</strong></div>
+    <div><span>Price</span><strong>€49</strong></div>
+  </div>
+
+  <p class="order-note">
+    Want a different size? Email me: <a href="mailto:jarkkopatana.orders@gmail.com">jarkkopatana.orders@gmail.com</a>
+  </p>
+</section>
+
+
+ <div class="footer">
+  <p class="footer-note">
+    Built as a lightweight static site.
+  </p>
+</div>
+
+  <script src="/assets/app.js"></script>
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); align-items:center; justify-content:center; z-index:999;">
+  <img id="lightbox-img" style="max-width:90%; max-height:90%;" />
+</div>
+<script>
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('a.lightbox').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      lbImg.src = link.href;
+      lb.style.display = 'flex';
+    });
+  });
+
+  lb.addEventListener('click', () => {
+    lb.style.display = 'none';
+    lbImg.src = '';
+  });
+</script>
+
+
+</body>
+</html>
