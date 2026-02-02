@@ -199,15 +199,6 @@ h1{
   justify-content: center;
 }
 
-.footer-note {
-  max-width: 600px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-
-}
 
 @media (max-width: 900px){
   .work{ grid-column: span 6; }
