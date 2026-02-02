@@ -279,12 +279,22 @@ h1{
   .form-grid{ grid-template-columns: 1fr; }
   .span-2{ grid-column: auto; }
 }
-.order-note a {
-  pointer-events: auto;
-  cursor: pointer;
-  text-decoration: underline;
-  @media (max-width: 560px){
+.order-note a{
+  pointer-events:auto;
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+@media (max-width: 560px){
   .hero{
+    min-height:auto;
+    padding:36px 18px;
+    background-position:center;
+  }
+  .hero-content{ width:100%; }
+  .hero-content h1{ font-size:28px; }
+}
+
     min-height: auto;
     padding: 36px 18px;
     background-position: center;
