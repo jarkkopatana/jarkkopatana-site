@@ -338,3 +338,15 @@ h1{
     max-width: 90%;
   }
 }
+
+.company-details {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.company-details h3 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
