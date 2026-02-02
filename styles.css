@@ -354,3 +354,8 @@ h1{
   font-weight: normal;
   margin-bottom: 0.5rem;
 }
+
+.navlinks a.active{
+  border-color:rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);
+}
