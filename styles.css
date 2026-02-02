@@ -24,6 +24,38 @@ a:hover{ opacity:.85; }
   margin:0 auto;
   padding:48px 0 80px;
 }
+.nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 22px;
+  border:1px solid var(--line);
+  background:rgba(16,18,26,.65);
+  backdrop-filter: blur(10px);
+  border-radius:999px;
+}
+
+.menu{
+  display:flex;
+  gap:18px; /* lisää väliä */
+  align-items:center;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* nav-linkit nappulamaisiksi */
+.menu a{
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid transparent;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.menu a:hover{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.15);
+}
 
 .navlinks a{
   padding:6px 12px;
