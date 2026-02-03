@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archive — Jarkko Patana</title>
+  <meta name="description" content="Archive selection by Jarkko Patana." />
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="nav">
+      <div class="brand">Jarkko Patana</div>
+      <div class="menu">
+        <a href="/index-fi.html">Koti</a>
+        <a href="/archive-fi.html">Galleria</a>
+        <a href="/uutiset.html">Uutiset</a>
+        <a href="/contact-fi.html">Yhteystiedot</a>
+      </div>
+    </nav>
+
+    <section class="section">
+      <h1>Galleria</h1>
+      <p>Saatavilla myös</p>
+
+      <div class="grid">
+        <article class="work">
+<a href="/assets/archive-03.jpg" class="lightbox">
+  <img src="/assets/archive-03.jpg" alt="Archive 03">
+</a>
+          <div class="workmeta">
+          <p class="worktitle">Moment of Calm</p>
+            <p class="workdesc">Fine art print.</p>
+            <div class="actions">
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScUuM8VPLqJ3mPXbfM7MGPMbvG8TnU0rdFFxZDKQMR6wuZHfw/viewform?usp=dialog" target="_blank" rel="noreferrer">
+  Buy print
+</a>
+
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="small">© Jarkko Patana</div>
+    </div>
+
+  </div>
+
+  <!-- lightbox toimii jo indexistä, sama script käy täällä -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); align-items:center; justify-content:center; z-index:999;">
+    <img id="lightbox-img" style="max-width:90%; max-height:90%;" />
+  </div>
+
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('a.lightbox').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = link.href;
+        lb.style.display = 'flex';
+      });
+    });
+
+    lb.addEventListener('click', () => {
+      lb.style.display = 'none';
+      lbImg.src = '';
+    });
+  </script>
+</body>
+</html>
