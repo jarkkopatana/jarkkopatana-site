@@ -440,4 +440,25 @@ img {
   -ms-user-select: none;
   pointer-events: auto;
 }
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* kuvakontille luokka */
+.no-save {
+  position: relative;
+  display: inline-block;
+}
+
+/* läpinäkyvä “kilpi” kuvan päälle */
+.no-save::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
 
