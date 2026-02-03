@@ -425,3 +425,11 @@ h1{
 .nav{
   margin-top:-24px;
 }
+
+.site-footer {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+  margin: 40px 0 20px;
+  font-family: inherit;
+}
