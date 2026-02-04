@@ -481,4 +481,13 @@ img {
   background: transparent;
   pointer-events: auto; /* tämä on nyt TÄRKEÄ */
 }
+#how-ordering-works {
+  width: 100%;
+  max-width: 720px;
+  margin: 6rem auto;
+}
+
+.order-info {
+  display: block;
+}
 
