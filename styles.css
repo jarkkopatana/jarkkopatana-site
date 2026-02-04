@@ -469,4 +469,16 @@ img {
 .hero {
   pointer-events: none;
 }
+.no-save {
+  position: relative;
+  display: inline-block;
+}
+
+.no-save::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: auto; /* tämä on nyt TÄRKEÄ */
+}
 
