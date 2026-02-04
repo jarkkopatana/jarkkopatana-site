@@ -461,4 +461,9 @@ img {
   background: transparent;
 }
 
+img {
+  -webkit-touch-callout: none;   /* iOS: estää pitkäpainallus-valikon */
+  -webkit-user-select: none;
+  user-select: none;
+}
 
