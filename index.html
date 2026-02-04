@@ -199,6 +199,19 @@ All works are available as fine art prints.
     }
   });
 </script>
+<script>
+  document.addEventListener("contextmenu", function (e) {
+    if (e.target.closest(".no-save") || e.target.tagName === "IMG") {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener("dragstart", function (e) {
+    if (e.target.tagName === "IMG") {
+      e.preventDefault();
+    }
+  });
+</script>
 
 
 </body>
