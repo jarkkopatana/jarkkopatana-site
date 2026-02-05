@@ -490,4 +490,6 @@ img {
 .order-info {
   display: block;
 }
+.order-info { display: none; }
+.order-info:target { display: block; }
 
