@@ -497,24 +497,15 @@ img {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 }
-.featured-work img{
-  width:100%;
-  max-height:520px;
-  object-fit:cover;
-  border-radius:18px;
-}
 .featured,
 .featured-work{
-  max-width: 820px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
-/* Kuva isompi mutta ei niin korkea että nav “katoaa” */
 .featured-work img{
-  width: 100%;
-  height: auto;
-  max-height: 520px;
-  object-fit: cover;
-  border-radius: 18px;
-  display: block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  display:block;
 }
