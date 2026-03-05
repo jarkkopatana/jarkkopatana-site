@@ -492,4 +492,8 @@ img {
 }
 .order-info { display: none; }
 .order-info:target { display: block; }
-
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
