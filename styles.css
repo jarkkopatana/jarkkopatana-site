@@ -509,3 +509,6 @@ img {
   border-radius:18px;
   display:block;
 }
+main {
+  min-height: calc(100vh - 220px);
+}
